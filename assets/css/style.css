@@ -90,7 +90,7 @@ TABLE OF CONTENTS:-
   --color-yellowGreen:#cef54b;
   --color-gray:#eef4f8;
   --color-gray2:#f0eff5;
-  --color-main-grad: linear-gradient(to right, #0c3df4 0%, #02b5ff 100%); }
+  --color-main-grad: linear-gradient(to right, #9900ff, #02b5ff 100%); }
 
 .color-main {
   color: var(--color-main) !important; }
@@ -666,9 +666,9 @@ small.text {
   height: 50%;
   width: 100%;
   background: -webkit-gradient(linear, left top, right top, from(#0c3df4), to(#02b5ff));
-  background: -webkit-linear-gradient(left, #0c3df4 0%, #02b5ff 100%);
-  background: -o-linear-gradient(left, #0c3df4 0%, #02b5ff 100%);
-  background: linear-gradient(to right, #0c3df4 0%, #02b5ff 100%);
+  background: -webkit-linear-gradient(left, #9900ff 0%, #02b5ff 100%);
+  background: -o-linear-gradient(left, #9900ff, #02b5ff 100%);
+  background: linear-gradient(to right, #9900ff, #02b5ff 100%);
   -webkit-transition-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
   -o-transition-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
   transition-timing-function: cubic-bezier(0.19, 1, 0.22, 1); }
