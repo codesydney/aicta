@@ -35,6 +35,18 @@
     <link rel="stylesheet" href="assets/css/lib/swiper.min.css" />
     <!-- ====== global style ====== -->
     <link rel="stylesheet" href="assets/css/style.css" />
+
+    
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+    </script>
+
+    <script type="text/javascript">
+    (function(){
+        emailjs.init("user_nEmQ6yi4aBPvlCKCkUAfK");
+    })();
+    </script>
+
 </head>
 
 <body>
@@ -80,6 +92,12 @@
                         <li class="nav-item dropdown">
                             <a class="nav-link " href="#section3" >
                                 Advocacy
+                               
+                            </a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link " href="#section4" >
+                                Contact
                                
                             </a>
                         </li>
@@ -201,65 +219,21 @@
 
                                 </p>
                                 <div class="faq style-3 style-4">
-                                    <div class="accordion" id="accordionExample">
-                                        <div class="accordion-item">
-                                            <h2 class="accordion-header" id="heading1">
-
-                                                <button class="accordion-button" type="button" data-bs-toggle="collapse"
-                                                    data-bs-target="#collapse1" aria-expanded="true"
-                                                    aria-controls="collapse1">
-                                                    Share knowledge
-                                                </button>
-                                            </h2>
-                                            <div id="collapse1" class="accordion-collapse collapse show"
-                                                aria-labelledby="heading1" data-bs-parent="#accordionExample">
-                                                <div class="accordion-body">
-                                                    Images, videos, PDFs and audio files are supported. Create math
-                                                    expressions and diagrams directly from the app. Take photos with the
-                                                    mobile app and save them to a note.
-
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="accordion-item">
-                                            <h2 class="accordion-header" id="heading2">
-
-                                                <button class="accordion-button collapsed" type="button"
-                                                    data-bs-toggle="collapse" data-bs-target="#collapse2"
-                                                    aria-expanded="false" aria-controls="collapse2">
-                                                    Build relationships
-                                                </button>
-                                            </h2>
-                                            <div id="collapse2" class="accordion-collapse collapse"
-                                                aria-labelledby="heading2" data-bs-parent="#accordionExample">
-                                                <div class="accordion-body">
-                                                    Images, videos, PDFs and audio files are supported. Create math
-                                                    expressions and diagrams directly from the app. Take photos with the
-                                                    mobile app and save them to a note.
-
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="accordion-item">
-                                            <h2 class="accordion-header" id="heading3">
-
-                                                <button class="accordion-button collapsed" type="button"
-                                                    data-bs-toggle="collapse" data-bs-target="#collapse3"
-                                                    aria-expanded="false" aria-controls="collapse3">
-                                                    Business opportunities
-                                                </button>
-                                            </h2>
-                                            <div id="collapse3" class="accordion-collapse collapse"
-                                                aria-labelledby="heading3" data-bs-parent="#accordionExample">
-                                                <div class="accordion-body">
-                                                    Images, videos, PDFs and audio files are supported. Create math
-                                                    expressions and diagrams directly from the app. Take photos with the
-                                                    mobile app and save them to a note.
-
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
+                                    <ul>
+                                    <li class="d-flex align-items-center mb-3">
+                                        
+                                        <h6 class="fw-bold">Tax Agent Community</h6>
+                                    </li>
+                                    <li class="d-flex align-items-center mb-3">
+                                        
+                                        <h6 class="fw-bold"> Online/Offline Activities</h6>
+                                    </li>
+                                    <li class="d-flex align-items-center">
+                                        
+                                        <h6 class="fw-bold">Taxation Seminar
+                                        </h6>
+                                    </li>
+                                </ul>
                                 </div>
 
                                
@@ -322,7 +296,7 @@
        
 
         <!-- ====== start community ====== -->
-        <section class="community section-padding pt-0 style-4">
+        <section class="community section-padding pt-0 style-4" id="section4">
             <div class="container">
                 <div class="section-head text-center style-4">
                    
@@ -331,7 +305,7 @@
 
                 </div>
                 <div class="content">
-                    <a href="#" class="commun-card">
+                    <a href="#section4" class="commun-card">
                         <div class="icon">
                             <i class="fab fa-github"></i>
                         </div>
@@ -340,7 +314,7 @@
                             <p>Open Source & Commnit Code</p>
                         </div>
                     </a>
-                    <a href="#" class="commun-card">
+                    <a href="#section4" class="commun-card">
                         <div class="icon">
                             <i class="fab fa-twitter"></i>
                         </div>
@@ -349,7 +323,7 @@
                             <p>Latest News & Update</p>
                         </div>
                     </a>
-                    <a href="#" class="commun-card">
+                    <a href="#section4" class="commun-card">
                         <div class="icon">
                             <i class="fab fa-telegram"></i>
                         </div>
@@ -361,11 +335,62 @@
                 </div>
             </div>
 
+            <!-- ====== start contact page ====== -->
+        <section class="contact section-padding pt-50 style-6" >
+            <div class="container" >
+                <div class="section-head text-center mb-100 style-4">
+                    <h2 class="mb-20"> Get In <span> Touch </span> </h2>
+                </div>
+              
+                <div class="content">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-8">
+                            <form action="contact.php" class="form" method="post">
+                                
+                                <div class="row">
+                                    <div class="col-lg-6">
+                                        <div class="form-group mb-20">
+                                            <input type="text" name="name" id="name" class="form-control" placeholder="Name"> 
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <div class="form-group mb-20">
+                                            <input type="text" name="email" id="email" class="form-control" placeholder="Email Address *" required>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <div class="form-group mb-20">
+                                            <input type="text" name="phone" id="phone" class="form-control"  placeholder="Phone Number (option)">
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="col-lg-12">
+                                        <div class="form-group">
+                                            <textarea rows="10" name="message" id="message" class="form-control" placeholder="How can we help you?"></textarea>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-12 text-center">
+                                        <div class="form-check d-inline-flex mt-30 mb-30">
+
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-12 text-center">
+                                        <input type="submit" value="Send Your Request" class="btn rounded-pill blue5-3Dbutn hover-blue2 sm-butn fw-bold text-light" onclick="sendMail()">
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <img src="assets/img/icons/contact_a.png" alt="" class="contact_a">
+                    <img src="assets/img/icons/contact_message.png" alt="" class="contact_message">
+                </div>
+            </div>
+        </section>
+        <!-- ====== end contact page ====== -->
         </section>
 
         <!-- ====== end community ====== -->
-    </main>
-    <!--End-Contents-->
+    
 
     <!-- ====== start footer ====== -->
     <footer class="style-4">
@@ -411,7 +436,7 @@
                                 <a href="#section3">ADVOCACY</a>
                             </li>
                             <li>
-                                <a href=""></a>
+                                <a href="#section4">CONTACT</a>
                             </li>
                             <li>
                                 <a href=""></a>
