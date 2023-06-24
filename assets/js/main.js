@@ -1169,3 +1169,31 @@ $( function() {
     });
   } );
 
+/* ===========  Email.js =========== */
+function sendMail() {
+
+    event.preventDefault();
+
+    var params = {
+      from_name: document.getElementById("name").value,
+      from_email: document.getElementById("email").value,
+      from_phone: document.getElementById("phone").value,
+      message: document.getElementById("message").value,
+    };
+  
+    const serviceID = "service_pz7r32r";
+    const templateID = "template_j4hvzra";
+  
+      emailjs.send(serviceID, templateID, params)
+      .then(res=>{
+          document.getElementById("name").value = "";
+          document.getElementById("email").value = "";
+          document.getElementById("phone").value = "";
+          document.getElementById("message").value = "";
+          console.log(res);
+          alert("Your message sent successfully!!")
+  
+      })
+      .catch(err=>console.log(err));
+  
+  }
