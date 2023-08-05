@@ -2112,8 +2112,8 @@ small.text {
 }
 
 .collapse.navbar-collapse {
-  padding-top: 7px; /* Adjust the desired top padding value */
-  padding-left: 500px; /* Adjust the desired right padding value */
+  padding-top: 5px; /* Adjust the desired top padding value */
+  padding-left: 10px; /* Adjust the desired right padding value */
 }
 
 /* --------------- navbar styles --------------- */
