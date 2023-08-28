@@ -1169,7 +1169,8 @@ $( function() {
     });
   } );
 
-/* ===========  Email.js =========== */
+
+/* ===========  Email.js-contact =========== */
 function sendMail() {
 
     event.preventDefault();
@@ -1191,9 +1192,100 @@ function sendMail() {
           document.getElementById("phone").value = "";
           document.getElementById("message").value = "";
           console.log(res);
-          alert("Your message sent successfully!!")
+          alert("Your message sent successfully")
   
       })
       .catch(err=>console.log(err));
   
   }
+
+  /* ===========  Email.js-applicationform =========== */
+function applicationformsendMail() {
+
+    event.preventDefault();
+
+    var params = {
+      name: document.getElementById("applicationformname").value,
+      email: document.getElementById("applicationformemail").value,
+      phone: document.getElementById("applicationformphone").value,
+      agency: document.getElementById("applicationformagency").value,
+      businessaddress: document.getElementById("applicationformaddress").value,
+      website: document.getElementById("applicationformwebsite").value,
+      city: document.getElementById("applicationformcity").value,
+      state: document.getElementById("applicationformstate").value,
+      postcode: document.getElementById("applicationformpostcode").value,
+      country: document.getElementById("applicationformcountry").value,
+      description: document.getElementById("applicationformdescription").value,
+    };
+  
+    const serviceID = "service_pz7r32r";
+    const templateID = "template_z6yojrv";
+  
+      emailjs.send(serviceID, templateID, params)
+      .then(res=>{
+        document.getElementById("applicationformname").value = "";
+        document.getElementById("applicationformemail").value = "";
+        document.getElementById("applicationformphone").value = "";
+        document.getElementById("applicationformagency").value = "";
+        document.getElementById("applicationformaddress").value = "";
+        document.getElementById("applicationformwebsite").value = "";
+        document.getElementById("applicationformcity").value = "";
+        document.getElementById("applicationformstate").value = "";
+        document.getElementById("applicationformpostcode").value = "";
+        document.getElementById("applicationformcountry").value = "";
+        document.getElementById("applicationformdescription").value = "";
+
+    
+
+          console.log(res);
+          alert("Your message sent successfully")
+  
+      })
+      .catch(err=>console.log(err));
+  
+  }
+
+
+/* ===========  Email.js-complaintform =========== */
+
+const optionSelector = document.getElementById("complaintformfrequency");
+
+
+function sendMailcomplaintform() {
+
+    event.preventDefault();
+
+
+    var params = {
+      name: document.getElementById("complaintformname").value,
+      email: document.getElementById("complaintformemail").value,
+      phone: document.getElementById("complaintformphone").value,
+      date: document.getElementById("complaintformdate").value,
+      time: document.getElementById("complaintformtime").value,
+      firsttimeofconcern: document.getElementById("complaintformfirsttimeofconcern").value,
+      detail: document.getElementById("complaintformdetail").value,
+      request: document.getElementById("complaintformrequest").value,
+    };
+  
+    const serviceID = "service_pz7r32r";
+    const templateID = "template_njombou";
+  
+      emailjs.send(serviceID, templateID, params)
+      .then(res=>{
+        document.getElementById("complaintformname").value = "";
+        document.getElementById("complaintformemail").value = "";
+        document.getElementById("complaintformphone").value = "";
+        document.getElementById("complaintformdate").value = "";
+        document.getElementById("complaintformtime").value = "";
+        document.getElementById("complaintformfirsttimeofconcern").value = "";
+        document.getElementById("complaintformdetail").value = "";
+        document.getElementById("complaintformrequest").value = "";
+        
+          console.log(res);
+          alert("Your message sent successfully")
+  
+      })
+      .catch(err=>console.log(err));
+  
+  }
+
