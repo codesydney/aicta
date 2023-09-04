@@ -8563,7 +8563,7 @@ header.style-15 {
 /* --------------- community style-4 --------------- */
 .community.style-4 .content {
   border: 1px solid #9993;
-  border-radius: 15px;
+  border-radius: 33px;
   padding: 30px 0;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -9764,6 +9764,9 @@ header.style-15 {
   border-top-right-radius: 40px;
   border-top-left-radius: 40px;
   padding: 100px 15px; }
+#applicationform{
+  border-top: 10px solid #c2bed3;
+}
   .contact.style-6 .content::before {
     position: absolute;
     content: "";
@@ -9788,8 +9791,8 @@ header.style-15 {
     max-width: 20%; }
   .contact.style-6 .content .contact_message {
     position: absolute;
-    right: -150px;
-    top: 100px;
+    right: -49px;
+    top: -60px;
     border-bottom-left-radius: 30px;
     pointer-events: none;
     max-width: 30%; }
@@ -10524,7 +10527,7 @@ footer.style-4 {
       display: flex;
       -webkit-box-pack: center;
       -ms-flex-pack: center;
-      justify-content: center; }
+      justify-content: flex-start; }
       footer.style-4 .foot .links li a {
         font-size: 12px;
         margin: 0 15px;
@@ -14730,6 +14733,38 @@ footer.style-15 {
         margin-top: 30px; }
     .home-style-15 footer.style-15 .content .links-content h6.sub-title {
       margin-top: 50px; } }
-
+#navbarDropdown2-1 {
+    padding-top: 0.2rem;
+    padding-left:0;
+    padding-right:0;
+    color: #212529;
+}
+#navbarDropdown2-1:hover {
+  color: #6f42c1;
+  /* ... other hover styles ... */
+}
+#dropdown-item-1{
+  margin-left: 0px;
+  text-align: center;
+  
+}
+@media (max-width: 990px) {
+  .dropdown-item {
+    display: block;
+    width: 200%;
+    padding: 0.25rem 1rem;
+    clear: both;
+    font-weight: 400;
+    color: #212529;
+    text-align: inherit;
+    text-decoration: none;
+    white-space: nowrap;
+    background-color: transparent;
+    border: 0;
+}
+}
+#complaintformtext2{
+  margin-top:20px;
+}
 /* ======== */
 /* ======= */
