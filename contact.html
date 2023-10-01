@@ -1,366 +1,605 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zxx">
+    <head>
+        <!-- meta tag -->
+        <meta charset="utf-8">
+        <title>AICTA - Association of International Chartered Tax Accountants</title>
+        <meta name="description" content="">
+        <!-- responsive tag -->
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- favicon -->
+        <link rel="apple-touch-icon" href="apple-touch-icon.png">
+        <link rel="shortcut icon" type="image/x-icon" href="images/fav.png">
+        <!-- bootstrap v3.3.7 css -->
+        <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+        <!-- font-awesome css -->
+        <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+        <!-- animate css -->
+        <link rel="stylesheet" type="text/css" href="css/animate.css">
+        <!-- owl.carousel css -->
+        <link rel="stylesheet" type="text/css" href="css/owl.carousel.css">
+        <!-- slick css -->
+        <link rel="stylesheet" type="text/css" href="css/slick.css">
+        <!-- off canvas css -->
+        <link rel="stylesheet" type="text/css" href="css/off-canvas.css">
+        <!-- linea-font css -->
+        <link rel="stylesheet" type="text/css" href="fonts/linea-fonts.css">
+        <!-- flaticon css  -->
+        <link rel="stylesheet" type="text/css" href="fonts/flaticon.css">
+        <!-- nivo slider CSS -->
+        <link rel="stylesheet" type="text/css" href="inc/custom-slider/css/nivo-slider.css">
+        <link rel="stylesheet" type="text/css" href="inc/custom-slider/css/preview.css">
+        <!-- magnific popup css -->
+        <link rel="stylesheet" type="text/css" href="css/magnific-popup.css">
+        <!-- Main Menu css -->
+        <link rel="stylesheet" href="css/rsmenu-main.css">
+        <!-- rsmenu transitions css -->
+        <link rel="stylesheet" href="css/rsmenu-transitions.css">
+        <!-- spacing css -->
+        <link rel="stylesheet" type="text/css" href="css/rs-spacing.css">
+        <!-- style css -->
+        <link rel="stylesheet" type="text/css" href="style.css"> <!-- This stylesheet dynamically changed from style.less -->
+        <!-- responsive css -->
+        <link rel="stylesheet" type="text/css" href="css/responsive.css">
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+            <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+        <![endif]-->
 
-<head>
-    <!-- Metas -->
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-    <meta name="keywords" content="HTML5 Template Iteck Multi-Purpose themeforest" />
-    <meta name="description" content="Iteck - Multi-Purpose HTML5 Template" />
-    <meta name="author" content="" />
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+        <script type="text/javascript">
+            (function() {
+                // https://dashboard.emailjs.com/admin/account
+                emailjs.init('user_nEmQ6yi4aBPvlCKCkUAfK');
+            })();
+        </script>
+        <script type="text/javascript">
+            window.onload = function() {
+                document.getElementById('contact-form').addEventListener('submit', function(event) {
+                    event.preventDefault();
+                    // generate a five digit number for the contact_number variable
+                    // this.contact_number.value = Math.random() * 100000 | 0;
+                    // these IDs from the previous steps
+                    emailjs.sendForm('service_pz7r32r', 'template_j4hvzra', this)
+                        .then(function() {
+                            console.log('SUCCESS!');
+                        }, function(error) {
+                            console.log('FAILED...', error);
+                        });
+                });
+            }
+        </script>    
 
-    <!-- Title  -->
-    <title>Contact Us</title>
-
-    <!-- Favicon -->
-    <link rel="shortcut icon" href="assets/img/fav.png" title="Favicon" sizes="16x16" />
-
-    <!-- ====== bootstrap icons cdn ====== -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
-
-    <!-- bootstrap 5 -->
-    <link rel="stylesheet" href="assets/css/lib/bootstrap.min.css">
-
-    <!-- ====== font family ====== -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
-        rel="stylesheet">
-
-    <link rel="stylesheet" href="assets/css/lib/all.min.css" />
-    <link rel="stylesheet" href="assets/css/lib/animate.css" />
-    <link rel="stylesheet" href="assets/css/lib/jquery.fancybox.css" />
-    <link rel="stylesheet" href="assets/css/lib/lity.css" />
-    <link rel="stylesheet" href="assets/css/lib/swiper.min.css" />
-    <!-- ====== global style ====== -->
-    <link rel="stylesheet" href="assets/css/style.css" />
-</head>
-
-<body>
-
-    <!-- ====== start loading page ====== -->
-    <div id="preloader">
-    </div>
-    <!-- ====== end loading page ====== -->
-
-    <!-- ====== start top navbar ====== -->
-    <div class="top-navbar style-5">
-        <div class="container">
-            <div class="content text-white">
-                <span class="btn sm-butn bg-white py-0 px-2 me-2 fs-10px">
-                    <small class="fs-10px">Special</small>
-                </span>
-                <img src="assets/img/icons/nav_icon/imoj_heart.png" alt="" class="icon-15">
-                <span class="fs-10px op-6">Get </span>
-                <small class="op-10 fs-10px">20% Discount</small>
-                <span class="fs-10px op-6">Get for New Account</span>
-                <a href="#" class="fs-10px text-decoration-underline ms-2">Register Now</a>
-            </div>
+    </head>
+    <body class="defult-home">
+        
+        <!-- Preloader area start here   -->
+        <div id="loading" class="image-preloader">
+            <div class="loader"><img src="images/logo.png" alt=""></div>
         </div>
-    </div>
-    <!-- ====== end top navbar ====== -->
+        <!--End preloader here -->
 
-    <!-- ====== start navbar ====== -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-transparent style-5">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="index.html">
-                <img src="assets/img/logo_lgr.png" alt="logo">
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav m-auto mb-2 mb-lg-0">
-                    <li class="nav-item dropdown">
-                        <a class="nav-link active dropdown-toggle" href="#" id="navbarDropdown1" role="button"
-                            data-bs-toggle="dropdown" aria-expanded="false">
-                            Homes
-                        </a>
-                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown1">
-                            <li><a class="dropdown-item" href="home-it-solutions2.html"> It Solution creative </a></li>
-                            <li><a class="dropdown-item" href="home-app-landing.html"> App Landing </a></li>
-                            <li><a class="dropdown-item" href="home-saas-technology.html"> Saas Technology </a></li>
-                            <li><a class="dropdown-item" href="home-marketing-startup.html"> Marketing Startup </a></li>
-                            <li><a class="dropdown-item" href="home-it-solutions.html"> It Solution </a></li>
-                            <li><a class="dropdown-item" href="home-software-company.html"> Software Company </a></li>
-                            <li><a class="dropdown-item" href="home-digital-agency.html"> Digital Agency </a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown2" role="button"
-                            data-bs-toggle="dropdown" aria-expanded="false">
-                            pages
-                        </a>
-                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown1">
-                            <li><a class="dropdown-item" href="about.html">about</a></li>
-                            <li><a class="dropdown-item" href="page-product-5.html">product</a></li>
-                            <li><a class="dropdown-item" href="page-services-5.html">services</a></li>
-                            <li><a class="dropdown-item" href="page-shop-5.html">shop</a></li>
-                            <li><a class="dropdown-item" href="page-single-project-5.html">single project</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="page-portfolio-5.html">
-                            portfolio
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="page-blog-5.html">
-                            blog
-                            <small
-                                class="fs-10px icon-20 rounded-pill bg-blue5 text-white fw-bold px-3 ms-2 d-inline-flex justify-content-center align-items-center">3</small>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">
-                            contact us
-                        </a>
-                    </li>
-                    
-                </ul>
-                <div class="nav-side">
-                    <div class="d-flex align-items-center">
-                        <span class="nav-item">
-                            <a class="nav-link" href="#">
-                                <i class="bi bi-person fs-5 me-2"></i>
-                                sign in
-                            </a>
-                        </span>
-                        <a href="#" class="btn rounded-pill blue5-3Dbutn hover-blue2 sm-butn fw-bold">
-                            <span>Start Free Trial <i class="bi bi-arrow-right ms-1"></i> </span>
-                        </a>
+        <!--Full width header Start-->
+        <div class="full-width-header header-transparent">
+            <!-- Toolbar Start -->
+            <div class="toolbar-area hidden-md">
+                <div class="container-fluid">
+                    <div class="row rs-vertical-middle">
+                        <div class="col-lg-6 col-md-7 col-sm-12">
+                            <div class="toolbar-contact">
+                                <ul>
+                                    <li><i class="fa fa-envelope-o"></i><a href="mailto:m.pleno@aicta.com.au">m.pleno@aicta.com.au</a></li>
+                                    <li><i class="fa fa-phone"></i><a href="tel:+61 417 906 971">(+61) 417 906 971</a></li>
+                                    <li><i class="fa fa-clock-o"></i>Mon – Fri 9:00 AM - 5:00 PM</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-5 col-sm-12">
+                            <div class="toolbar-sl-share">
+                                <ul>
+                                    <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                    <!--
+                                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-pinterest-p"></i></a></li>
+                                    -->
+                                    <!--
+                                    <li class="get-btn"><a href="#">Talk to us</a></li>
+                                    -->
+                                </ul>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </nav>
-    <!-- ====== end navbar ====== -->
+            <!-- Toolbar End -->
+            
+            <!--Header Start-->
+            <header id="rs-header" class="rs-header">
+                <!-- Menu Start -->
+                <div class="menu-area menu-sticky">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-lg-3">
+                                <div class="logo-area">
+                                    <a class="light" href="index.html"><img src="images/white-logo.png" alt="logo"></a>
+                                    <a class="dark" href="index.html"><img src="images/logo.png" alt="logo"></a>
+                                </div>
+                            </div>
+                            <div class="col-lg-9 text-right">
+                                <div class="rs-menu-area">
+                                    <div class="main-menu">
+                                        <div class="mobile-menu">
+                                            <a class="rs-menu-toggle">
+                                                <i class="fa fa-bars"></i>
+                                            </a>
+                                        </div>
+                                        <nav class="rs-menu">
+                                            <ul class="nav-menu">
+                                                <li class="rs-mega-menu mega-rs menu-item-has-children current-menu-item"> <a href="#"></a>
+                                                    <ul class="mega-menu"> 
+                                                        <li class="mega-menu-container">
+                                                            <div class="mega-menu-innner">
+                                                                <div class="single-megamenu">
+                                                                    <ul class="sub-menu">
+                                                                        <!--
+                                                                        <li class="menu-title">Home Multipage</li>
+                                                                        <li class="active"><a href="index.html">Home One</a> </li>
+                                                                        <!--
+                                                                        <li><a href="index2.html">Home Two</a> </li>
+                                                                        <li><a href="index3.html">Home Three</a> </li>
+                                                                        <li><a href="index4.html">Home Four</a> </li>
+                                                                        <li class="last-item"><a href="index5.html">Home Five</a> </li>
+                                                                        -->
+                                                                    </ul>
+                                                                </div>
+                                                                <!--
+                                                                <div class="single-megamenu">
+                                                                    <ul class="sub-menu last-sub-menu">
+                                                                        <li class="menu-title">Home Onepage</li>
+                                                                        <li><a href="onepage1.html">Home1 Onepage</a> </li>
+                                                                        <li><a href="onepage2.html">Home2 Onepage</a> </li>
+                                                                        <li><a href="onepage3.html">Home3 Onepage</a> </li>
+                                                                        <li><a href="onepage4.html">Home4 Onepage</a> </li>
+                                                                        <li class="last-item"><a href="onepage5.html">Home5 Onepage</a> </li>
+                                                                    </ul>
+                                                                </div>
+                                                                -->
+                                                            </div>
+                                                        </li>
+                                                    </ul> <!-- //.mega-menu -->
+                                                </li>
 
-    <!--Contents-->
-    <main class="contact-page style-5">
-        <!-- ====== start contact page ====== -->
-        <section class="contact section-padding pt-50 style-6">
+                                                <!--    
+                                                <li><a href="about.html">About Us</a></li>
+
+                                                <li class="menu-item-has-children">
+                                                    <a href="#">Practice Areas</a>
+                                                    <ul class="sub-menu">
+                                                        <li><a href="practice-areas.html">Practice Areas</a> </li>
+                                                        <li><a href="practice-single.html">Practice Single</a> </li>
+                                                    </ul>
+                                                </li>
+
+                                                <li><a href="case-result.html">Case Result</a></li>
+
+                                                <li class="menu-item-has-children">
+                                                    <a href="#">Pages</a>
+                                                    <ul class="sub-menu">
+                                                        <li class="menu-item-has-children">
+                                                            <a href="#">Shop</a>
+                                                            <ul class="sub-menu">
+                                                                <li><a href="shop.html">Shop</a></li>
+                                                                <li><a href="shop-single.html">Shop Single</a></li>
+                                                                <li><a href="cart.html">Cart</a></li>
+                                                                <li><a href="checkout.html">Checkout</a></li>
+                                                            </ul>
+                                                        </li>
+                                                        <li class="menu-item-has-children">
+                                                            <a href="#">Attorneys</a>
+                                                            <ul class="sub-menu">
+                                                                <li><a href="team.html">Team One</a></li>
+                                                                <li><a href="team2.html">Team Two</a></li>
+                                                                <li><a href="team3.html">Team Three</a></li>
+                                                                <li><a href="team-single.html">Team Single</a></li>
+                                                            </ul>
+                                                        </li>
+                                                        <li class="menu-item-has-children">
+                                                            <a href="#">Others</a>
+                                                            <ul class="sub-menu">
+                                                                <li><a href="gallery.html">Gallery</a></li>
+                                                                <li><a href="faq.html">FAQ</a></li>
+                                                                <li><a href="error.html">404 Page</a></li>
+                                                            </ul>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+
+                                                <li class="menu-item-has-children">
+                                                    <a href="#">Blog</a>
+                                                    <ul class="sub-menu">
+                                                        <li><a href="blog.html">Blog</a></li>
+                                                        <li class="menu-item-has-children">
+                                                            <a href="#">Blog Grid</a>
+                                                            <ul class="sub-menu">
+                                                                <li><a href="blog2.html">Blog 2 Column</a></li>
+                                                                <li><a href="blog3.html">Blog 3 Column</a></li>
+                                                            </ul>
+                                                        </li>
+                                                        <li class="menu-item-has-children">
+                                                            <a href="#">Blog Sidebar</a>
+                                                            <ul class="sub-menu">
+                                                                <li><a href="blog-left.html">Blog Left Sidebar</a></li>
+                                                                <li><a href="blog-right.html">Blog Right Sidebar</a></li>
+                                                            </ul>
+                                                        </li>
+                                                        <li class="menu-item-has-children">
+                                                            <a href="#">Single Post</a>
+                                                            <ul class="sub-menu">
+                                                                <li><a href="blog-single-left.html">Post Left Sidebar</a></li>
+                                                                <li><a href="blog-single-right.html">Post Right Sidebar</a></li>
+                                                                <li><a href="blog-single.html">Full Width Post</a></li>
+                                                            </ul>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                                <li><a href="contact.html">Contact</a></li>
+                                            --> 
+                                            <li><a href="index.html">Home</a></li>                                            
+                                            <li><a href="constitution.html">Constitution</a></li>                                            
+                                            <li><a href="#">Forms</a></li>
+                                            <li><a href="contact.html">Contact</a></li>
+                                            </ul> <!-- //.nav-menu -->
+                                        </nav>
+                                    </div> <!-- //.main-menu -->
+
+                                    <!--
+                                    <div class="expand-btn-inner">
+                                        <ul>
+                                            <li class="icon-bar cart-inner mini-cart-active">
+                                                <a class="cart-icon">
+                                                    <span class="cart-count">2</span>
+                                                    <i class="flaticon-shopping-bag-1"></i>
+                                                </a>
+                                                <div class="woocommerce-mini-cart text-left">
+                                                    <ul class="cart-icon-product-list">
+                                                        <li class="display-flex">
+                                                            <div class="icon-cart">
+                                                                <a href="#"><i class="fa fa-times"></i></a>
+                                                            </div>
+                                                            <div class="product-info">
+                                                                <a href="cart.html">Law Book</a><br>
+                                                                <span class="quantity">1 × $30.00</span>
+                                                            </div>
+                                                            <div class="product-image">
+                                                                <a href="cart.html"><img src="images/shop/1.jpg" alt="Product Image"></a>
+                                                            </div>
+                                                        </li>
+                                                        <li class="display-flex">
+                                                            <div class="icon-cart">
+                                                                <a href="#"><i class="fa fa-times"></i></a>
+                                                            </div>
+                                                            <div class="product-info">
+                                                                <a href="cart.html">Spirit Level</a><br>
+                                                                <span class="quantity">1 × $30.00</span>
+                                                            </div>
+                                                            <div class="product-image">
+                                                                <a href="cart.html"><img src="images/shop/2.jpg" alt="Product Image"></a>
+                                                            </div>
+                                                        </li>
+                                                    </ul>
+
+                                                    <div class="total-price text-center">
+                                                        <span class="subtotal">Subtotal:</span>
+                                                        <span class="current-price">$85.00</span>
+                                                    </div>
+
+                                                    <div class="cart-btn text-center">
+                                                        <a class="crt-btn btn1" href="cart.html">View Cart</a>
+                                                        <a class="crt-btn btn2" href="checkout.html">Check Out</a>
+                                                    </div>
+                                                </div> 
+                                            </li>
+                                            <li>
+                                                <a class="hidden-xs rs-search" data-target=".search-modal" data-toggle="modal" href="#">
+                                                    <i class="flaticon-search"></i>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Menu End -->
+
+                </nav>
+                <!-- Canvas Menu end -->
+            </header>
+            <!--Header End-->
+        </div>
+        <!--Full width header End-->
+
+        <!-- Breadcrumbs Section Start -->
+        <div class="rs-breadcrumbs">
             <div class="container">
-                <div class="section-head text-center mb-100 style-5">
-                    <h2 class="mb-20"> Get In <span> Touch </span> </h2>
-                    <p>We will contact again after receive your request in 24h</p>
+                <div class="breadcrumbs-inner text-center">
+                    <h1 class="breadcrumbs-title white-color">Contact</h1>
+                    <ul class="breadcrumbs-meta">
+                        <li><a href="index.html">Home</a></li>
+                        <li>Contact</li>
+                    </ul>
                 </div>
-                <div class="text-center mb-100">
-                    <h2 class="ltspc-20 text-uppercase fs-1 lh-1 mb-50 mt-30 color-blue5">+61 417 906 971
-                    </h2>
-                    <h4 class="fw-normal mb-20 color-000">
-                        <a href="mailto:pleno@bigpond.com"> pleno@bigpond.com </a>
-                    </h4>
-                    <h4 class="fw-normal mb-10 color-000">348 Waterloo Road, GREENACRE, NSW, 2190
-                    </h4>
-                </div>
-                <div class="content">
-                    <div class="row justify-content-center">
-                        <div class="col-lg-8">
-                            <form action="contact.php" class="form" method="post">
-                                <p class="text-center text-danger fs-12px mb-30">The field is required mark as *</p>
-                                <div class="row">
-                                    <div class="col-lg-6">
-                                        <div class="form-group mb-20">
-                                            <input type="text" name="name" class="form-control" placeholder="Name"> 
+            </div>
+        </div>
+        <!-- Breadcrumbs Section End -->
+
+            <!-- Contact Inner Sction Start -->
+            <div class="rs-contact inner gray-bg pt-120 md-pt-80">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-4 order-last md-mb-30">
+                            <div class="contact-sidebar">
+                                <!--
+                                <div class="image-part">
+                                    <img src="images/contact/sidebar.jpg" alt="">
+                                </div>
+                                 -->
+                                <div class="content-part">
+                                    <h3 class="title">Head Office</h3>
+                                    <div class="address-item ml--5 mb-20">
+                                        <div class="address-icon">
+                                            <i class="icon-basic-smartphone"></i>
+                                        </div>
+                                        <div class="address-text">
+                                            <h5 class="contact-title">Office Phone</h5>
+                                            <a href="tel:(+61) 417 906 971">(+61) 417 906 971</a>
                                         </div>
                                     </div>
-                                    <div class="col-lg-6">
-                                        <div class="form-group mb-20">
-                                            <input type="text" name="email" class="form-control" placeholder="Email Address *" required>
+                                    <div class="address-item ml--5 mb-20">
+                                        <div class="address-icon">
+                                            <i class="icon-basic-mail-multiple"></i>
                                         </div>
-                                    </div>
-                                    <div class="col-lg-6">
-                                        <div class="form-group mb-20">
-                                            <input type="text" name="phone" class="form-control"  placeholder="Phone Number (option)">
+                                        <div class="address-text">
+                                            <h5 class="contact-title">Mail Us</h5>
+                                            <a href="mailto:m.pleno@aicta.com.au">m.pleno@aicta.com.au</a>
                                         </div>
-                                    </div>
-                                    <div class="col-lg-6">
-                                        <div class="form-group mb-20">
-                                            <input type="text" name="website" class="form-control" placeholder="Your Website (option)">
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-12">
-                                        <div class="form-group mb-20">
-                                            <select name="option" class="form-select">
-                                                <option value="how can we help" selected>How can we help you?</option>
-                                                <option value="option 1">option 1</option>
-                                                <option value="option 2">option 2</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-12">
-                                        <div class="form-group">
-                                            <textarea rows="10" name="message" class="form-control" placeholder="How can we help you?"></textarea>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-12 text-center">
-                                        <div class="form-check d-inline-flex mt-30 mb-30">
-                                            <input class="form-check-input me-2 mt-0" type="checkbox" value="" id="flexCheckDefault">
-                                            <label class="form-check-label small" for="flexCheckDefault">
-                                                By submitting, i’m agreed to the <a href="#" class="text-decoration-underline">Terms & Conditons</a>
-                                            </label>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-12 text-center">
-                                        <input type="submit" value="Send Your Request" class="btn rounded-pill blue5-3Dbutn hover-blue2 sm-butn fw-bold text-light">
                                     </div>
                                 </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-8 pr-30">
+                            <div class="contact-wrap">
+                                <div class="sec-title mb-50">
+                                    <h2 class="title mb-33">Get In Touch</h2>
+                                    <div class="desc">Need assistance? Reach out to us using the Contact Us form, and we'll be right on it.</div>
+                                </div>
+                                <div id="form-messages"></div>
+                                <form id="contact-form" class="contact-inner-page" method="post" action="contact.php">
+                                    <div class="row">
+                                        <div class="col-lg-12">
+                                            <div class="form-field">
+                                                <input type="text" placeholder="Your Name" id="name" name="name" required>
+                                            </div>                               
+                                        </div>
+                                        <div class="col-lg-12">
+                                            <div class="form-field">
+                                                <input type="email" placeholder="Your Email" id="email" name="email" required>
+                                            </div> 
+                                        </div>
+                                        <div class="col-lg-12">
+                                            <div class="form-field">
+                                                <input type="text" placeholder="Phone" id="phone" name="phone" required>
+                                            </div>
+                                        </div>
+                                        <!--
+                                        <div class="col-lg-6">
+                                            <div class="form-field">
+                                                <input type="text" name="website" placeholder="Your Website">
+                                            </div>                             
+                                        </div>
+                                        -->
+                                        <div class="col-md-12">
+                                            <div class="form-field">
+                                                <textarea placeholder="Your Message" id="message" name="message" required></textarea>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--
+                                    <div class="form-btn submit-btn mt-30">
+                                        <input class="readon upper" type="submit" onclick="sendMail()">Submit request</button>
+                                    </div>
+                                    -->
+                                    <div class="form-btn submit-btn mt-30">
+                                        <input type="submit" value="Submit request"/>
+                                    </div>                                        
+                                </form>
+
+                                <!--
+                                <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+                                <script>
+                                  (function () {
+                                    emailjs.init('user_nEmQ6yi4aBPvlCKCkUAfK');
+                                  })();
+                                </script>
+                                <script>
+                                  const handleForm = async (e) => {
+                                    try {
+                                      await emailjs.sendForm('service_pz7r32r', 'template_j4hvzra', document.getElementById('contact-form'));
+                                      alert('email sent!');
+                                    } catch (error) {
+                                      console.error(error);
+                                      alert('Failed to send email');
+                                    }
+                                  };
+                                </script>
+                                -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--
+                <div class="g-map mt-120 md-mt-80">
+                    <iframe src="https://maps.google.com/maps?q=37.803467%2C%20-122.472369&t=&z=13&ie=UTF8&iwloc=&output=embed"></iframe>
+                </div>
+                -->
+            </div>
+            <!-- Contact Inner Sction End -->
+    
+        
+        <!-- Footer Start -->
+        <footer id="rs-footer" class="rs-footer">
+            <div class="footer-top">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-3 col-md-12 col-sm-12 footer-widget-one md-mb-50">
+                            <div class="about-widget">
+                                <a href="index.html">
+                                    <img src="images/white-logo.png" alt="Footer Logo">
+                                </a>                                
+                                <ul class="social-links">
+                                    <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-12 col-sm-12 footer-widget-two md-mb-50">
+                            <h5 class="footer-title">Quick Contact Info</h5>
+                            <ul class="footer-address">
+                                <li><i class="fa fa-globe"></i><span>Sydney, Australia</span></li>
+                                <li><i class="fa fa-phone"></i><a href="tel:+61 417 906 971">(+61) 417 906 971</a></li>
+                                <li><i class="fa fa-envelope-o"></i><a href="mailto:m.pleno@aicta.com.au">m.pleno@aicta.com.au</a></li>
+                                <li><i class="fa fa-clock-o"></i>Mon – Fri 9:00 AM - 5:00 PM</li>
+                            </ul>
+                        </div>
+                        
+                        
+                        
+                        <!--
+                        <div class="col-lg-3 col-md-12 col-sm-12 footer-widget-three md-mb-50">
+                            <h5 class="footer-title">Latest News</h5>
+                            <div class="footer-news">
+                                <div class="news-item">
+                                    <div class="image-part">
+                                        <img src="images/blog/footer-blog/1.jpg" alt="">
+                                    </div>
+                                    <div class="content-part">
+                                        <a class="title" href="#">Advocacy</a>
+                                        <span class="date">June 15, 2019</span>
+                                    </div>
+                                </div>                                                                
+                                <div class="news-item">
+                                    <div class="image-part">
+                                        <img src="images/blog/footer-blog/2.jpg" alt="">
+                                    </div>
+                                    <div class="content-part">
+                                        <a class="title" href="#">Flexible working Hours</a>
+                                        <span class="date">June 15, 2019</span>
+                                    </div>
+                                </div>
+                                <div class="news-item">
+                                    <div class="image-part">
+                                        <img src="images/blog/footer-blog/3.jpg" alt="">
+                                    </div>
+                                    <div class="content-part">
+                                        <a class="title" href="#">The Top Law Students</a>
+                                        <span class="date">June 15, 2019</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    -->
+                    <!--
+                        <div class="col-lg-3 col-md-12 col-sm-12 footer-widget-four">
+                            <h5 class="footer-title">Subscribe to Our Newsletter</h5>
+                            <p class="desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                            <p class="desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                            <!--
+                            <form class="footer-newsletter">
+                                <input type="email" name="email" placeholder="Email Address" required>
+                                <button type="submit"><i class="fa fa-paper-plane"></i></button>
                             </form>
                         </div>
+                    -->
                     </div>
-                    <img src="assets/img/icons/contact_a.png" alt="" class="contact_a">
-                    <img src="assets/img/icons/contact_message.png" alt="" class="contact_message">
                 </div>
             </div>
-        </section>
-        <!-- ====== end contact page ====== -->
+            <div class="footer-bottom">
+                <div class="container">                    
+                    <div class="copyright text-center">
+                        <p>Web Development by <a href="https://www.code.sydney" target="_blank" >Code.Sydney</a></p>
+                        <p>&copy; 2023 All Rights Reserved</p>
+                        <a href="./pdf/AICTA_Website_Privacy_Policy_2023.pdf" download="AICTA Website Privacy Policy">Privacy Policy</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- Footer End -->
 
-        <!-- ====== start Map  ====== -->
-        <div class="map">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3868.8715584971055!2d151.0571790152475!3d-33.89521319730164!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6b12bb9cccfa42c7%3A0x7a56124399728a1!2s348%20Waterloo%20Rd%2C%20Greenacre%20NSW%202190!5e0!3m2!1sen!2sau!4v1680868402010!5m2!1sen!2sau" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> 
+        <!-- start scrollUp  -->
+        <div id="scrollUp">
+            <i class="fa fa-angle-up"></i>
         </div>
-        <!-- ====== start map ====== -->
-    </main>
-    <!--End-Contents-->
+        <!-- End scrollUp  -->
 
-    <!-- ====== start footer ====== -->
-    <footer class="style-5">
-        <div class="container">
-            <div class="row gx-0 justify-content-between">
-                <div class="col-lg-3">
-                    <div class="items">
-                        <div class="title">
-                            AICTA - 1st Tax Agent
-                        </div>
-                        <small class="text">
-                            Our team has developed an in-depth understanding of the tax code and regulations, and how to apply them to meet our clients' needs. Contact us today to schedule a consultation and learn more about how we can help you achieve your financial goals.
-                        </small>
-                        <div class="socail-icons">
-                            <a href="https://twitter.com/"
-                                class="icon-35 rounded-circle bg-gray overflow-hidden d-inline-flex align-items-center justify-content-center text-gray me-2" target="_blank">
-                                <i class="fab fa-twitter"></i>
-                            </a>
-                            <a href="https://facebook.com/"
-                                class="icon-35 rounded-circle bg-gray overflow-hidden d-inline-flex align-items-center justify-content-center text-gray me-2" target="_blank">
-                                <i class="fab fa-facebook-f"></i>
-                            </a>
-                            <a href="https://instagram.com/"
-                                class="icon-35 rounded-circle bg-gray overflow-hidden d-inline-flex align-items-center justify-content-center text-gray" target="_blank">
-                                <i class="fab fa-instagram"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3">
-                    <div class="items">
-                        <div class="title">
-                            Information
-                        </div>
-                        <small class="text mb-10 d-block">
-                            348 Waterloo Road, GREENACRE, NSW, 2190
-                        </small>
-                        <small class="text mb-10 d-block">
-                            +61 417 906 971
-                        </small>
-                        <small class="text d-block">
-                            <a href="mailto:pleno@bigpond.com" class="color-000"> pleno@bigpond.com </a>
-                        </small>
-                    </div>
-                </div>
-                <div class="col-lg-2">
-                    <div class="items">
-                        <div class="title">
-                            Useful Links
-                        </div>
-                        <ul>
-                            <li>
-                                <a href="index.html"> Home </a>
-                            </li>
-                            <li>
-                                <a href="about.html"> About AICTA </a>
-                            </li>
-                            <li>
-                                <a href="page-portfolio-5.html"> Projects </a>
-                            </li>
-                            <li>
-                                <a href="page-product-5.html"> product </a>
-                            </li>
-                            <li>
-                                <a href="page-blog-5.html"> Blog </a>
-                            </li>
-                            <li>
-                                <a href="#"> Contact </a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-lg-2">
-                    <div class="items">
-                        <div class="title">
-                            Resource
-                        </div>
-                        <ul>
-                            <li>
-                                <a href="#"> Online Documentation </a>
-                            </li>
-                            <li>
-                                <a href="#"> Roadmap </a>
-                            </li>
-                            <li>
-                                <a href="#"> Intergrations </a>
-                            </li>
-                            <li>
-                                <a href="#"> FAQs </a>
-                            </li>
-                            <li>
-                                <a href="#"> Help Center </a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="foot">
-                <div class="row">
-                    <div class="col-lg-3">
-                        <div class="logo">
-                            <img  src="assets/img/logo_lgr.png" alt="">
-                        </div>
-                    </div>
-                    <div class="col-lg-6">
-                        <small class="small">
-                            © 2023 Copyrights by <a href="#" class="fw-bold text-decoration-underline">AICTA Co.</a> All
-                            Rights Reserved. Designed by <a href="https://www.code.sydney/"
-                                class="fw-bold text-decoration-underline">Code.Sydney</a>
-                        </small>
+        <!-- Search Modal Start -->
+        <div aria-hidden="true" class="modal fade search-modal" role="dialog" tabindex="-1">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span class="flaticon-cross"></span>
+            </button>
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="search-block clearfix">
+                        <form>
+                            <div class="form-group">
+                                <input class="form-control" placeholder="Search Here..." type="text">
+                            </div>
+                        </form>
                     </div>
                 </div>
             </div>
         </div>
-    </footer>
-    <!-- ====== end footer ====== -->
+        <!-- Search Modal End -->
 
-    <!-- ====== start to top button ====== -->
-    <a href="#" class="to_top bg-gray rounded-circle icon-40 d-inline-flex align-items-center justify-content-center">
-        <i class="bi bi-chevron-up fs-6 text-dark"></i>
-    </a>
-    <!-- ====== end to top button ====== -->
-
-    <!-- ====== request ====== -->
-    <script src="assets/js/lib/jquery-3.0.0.min.js"></script>
-    <script src="assets/js/lib/jquery-migrate-3.0.0.min.js"></script>
-    <script src="assets/js/lib/bootstrap.bundle.min.js"></script>
-    <script src="assets/js/lib/wow.min.js"></script>
-    <script src="assets/js/lib/jquery.fancybox.js"></script>
-    <script src="assets/js/lib/lity.js"></script>
-    <script src="assets/js/lib/swiper.min.js"></script>
-    <script src="assets/js/lib/jquery.waypoints.min.js"></script>
-    <script src="assets/js/lib/jquery.counterup.js"></script>
-    <script src="assets/js/lib/pace.js"></script>
-    <script src="assets/js/lib/scrollIt.min.js"></script>
-    <script src="assets/js/main.js"></script>
-  
-</body>
-
+        <!-- modernizr js -->
+        <script src="js/modernizr-2.8.3.min.js"></script>
+        <!-- jquery latest version -->
+        <script src="js/jquery.min.js"></script>
+        <!-- bootstrap js -->
+        <script src="js/bootstrap.min.js"></script>
+        <!-- Menu js -->
+        <script src="js/rsmenu-main.js"></script> 
+        <!-- op nav js -->
+        <script src="js/jquery.nav.js"></script>
+        <!-- owl.carousel js -->
+        <script src="js/owl.carousel.min.js"></script>
+        <!-- Slick js -->
+        <script src="js/slick.min.js"></script>
+        <!-- isotope.pkgd.min js -->
+        <script src="js/isotope.pkgd.min.js"></script>
+        <!-- imagesloaded.pkgd.min js -->
+        <script src="js/imagesloaded.pkgd.min.js"></script>
+        <!-- wow js -->
+        <script src="js/wow.min.js"></script>
+        <!-- Skill bar js -->
+        <script src="js/skill.bars.jquery.js"></script>
+        <script src="js/jquery.counterup.min.js"></script>        
+         <!-- counter top js -->
+        <script src="js/waypoints.min.js"></script>
+        <!-- video js -->
+        <script src="js/jquery.mb.YTPlayer.min.js"></script>
+        <!-- magnific popup js -->
+        <script src="js/jquery.magnific-popup.min.js"></script>
+        <!-- Nivo slider js -->
+        <script src="inc/custom-slider/js/jquery.nivo.slider.js"></script>       
+        <!-- plugins js -->
+        <script src="js/plugins.js"></script>
+        <!-- contact form js -->
+        <script src="js/contact.form.js"></script>
+        <!-- main js -->
+        <script src="js/main.js"></script>
+    </body>
 </html>
